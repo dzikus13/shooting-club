@@ -1,0 +1,22 @@
+
+<table class="styled-table">
+    <link rel="stylesheet" href="style.css">
+        <thead>
+            <tr>
+                <th>Name of the gun</th>
+                <th>caliber</th>
+                <th> price for club member</th>
+                <th>price</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for item in pl %}
+            <tr>
+                <td>{{ item.gun_name }}</td>
+                <td>{{ item.caliber }}</td>
+                <td>{{ item.price_cm }}</td>
+                <td>{{ item.price_ncm }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
