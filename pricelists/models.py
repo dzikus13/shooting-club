@@ -14,6 +14,7 @@ class Pricelist(models.Model):
     # We can remove prices from here and just take it from caliber
     price_cm = models.DecimalField(max_digits=6, decimal_places=2) # club member
     price_ncm = models.DecimalField(max_digits=6, decimal_places=2) # non club member
+    #gun_image = models.ImageField(blank=True)
 
     def __str__(self):
 
