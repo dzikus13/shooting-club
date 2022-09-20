@@ -3,9 +3,7 @@ from django.contrib.auth import get_user_model
 from django.db import models
 from allauth.account.signals import user_logged_in
 
-
 User = get_user_model()
-
 
 def user_logged_in_receiver(request, user, **kwargs):
     print(request)
@@ -18,9 +16,6 @@ class Tournament(models.Model):
     date = models.DateTimeField
     description = models.TextField
 
-class Weapon(models.Model):
-    pass
-
 class Participant(models.Model):
     name = models.CharField(max_length=255)
 
@@ -28,15 +23,12 @@ class Pricing(models.Model):
     price = models.DecimalField(max_digits=8, decimal_places=2)
 
 class Competition(models.Model):
-    competition_type = models.CharField(max_length=255)
+    competition_name = models.CharField(max_length=255)
 
 class Prize(models.Model):
-    description = models.TextField
+    description = models.TextField()
     place = models.DecimalField(max_digits=3, decimal_places=0)
     competition=models.ForeignKey(Competition, on_delete=models.CASCADE)
-
-
-
 
 class Schedule(models.Model):
     participant=models.ForeignKey(Participant, on_delete=models.CASCADE)
