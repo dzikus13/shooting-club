@@ -1,4 +1,3 @@
-import imp
 from django.shortcuts import render
 from .models import Tournament
 
@@ -6,5 +5,5 @@ from .models import Tournament
 
 def tournament(request): # get all tournaments
     t = Tournament.objects.all()
-    return render(request, "pricelists/pricelist.html", {"t":t})
+    return render(request, "tournament/tournament.html", {"t":t})
     
