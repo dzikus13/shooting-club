@@ -13,8 +13,8 @@ user_logged_in.connect(user_logged_in_receiver, sender=User)
 
 class Tournament(models.Model):
     name = models.CharField(max_length=255)
-    date = models.DateTimeField
-    description = models.TextField
+    date = models.DateTimeField()
+    description = models.TextField()
 
 class Participant(models.Model):
     name = models.CharField(max_length=255)
@@ -33,12 +33,9 @@ class Prize(models.Model):
 class Schedule(models.Model):
     participant=models.ForeignKey(Participant, on_delete=models.CASCADE)
     competition=models.ForeignKey(Competition, on_delete=models.CASCADE)
-    schedule_date = models.DateTimeField
+    schedule_date = models.DateTimeField()
 
 class Score(models.Model):
-    score = models.TextField
+    score = models.TextField()
     participant = models.ForeignKey(Participant, on_delete=models.CASCADE)
     competition = models.ForeignKey(Competition, on_delete=models.CASCADE)
-    
-
-
