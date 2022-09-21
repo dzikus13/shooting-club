@@ -16,6 +16,9 @@ class Tournament(models.Model):
     date = models.DateTimeField()
     description = models.TextField()
 
+    def __str__(self):
+        return self.name
+
 class Participant(models.Model):
     name = models.CharField(max_length=255)
 

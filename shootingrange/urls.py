@@ -17,8 +17,10 @@ from django.urls import path
 from django.contrib import admin
 
 from pricelists.views import pricelist
+from competitions.views import tournament
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('pricelist/', pricelist)
+    path('pricelist/', pricelist),
+    path('tournament/', tournament),
 ]
