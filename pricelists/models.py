@@ -17,8 +17,5 @@ class Pricelist(models.Model):
     gun_image = models.ImageField(blank=True, null=True, upload_to="guns/") # Only possible to upload images + pip install pillow
 
     def __str__(self):
-
-        
-
         return self.gun_name
 
