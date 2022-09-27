@@ -16,6 +16,8 @@ class Tournament(models.Model):
     date = models.DateTimeField()
     description = models.TextField()
 
+
+
     def __str__(self):
         return self.name
 
@@ -42,3 +44,4 @@ class Score(models.Model):
     score = models.TextField()
     participant = models.ForeignKey(Participant, on_delete=models.CASCADE)
     competition = models.ForeignKey(Competition, on_delete=models.CASCADE)
+
