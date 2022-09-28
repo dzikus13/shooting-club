@@ -18,6 +18,11 @@ class Tournament(models.Model):
     def __str__(self):
         return self.name 
 
+
+
+    def __str__(self):
+        return self.name
+
 class Participant(models.Model):
     name = models.CharField(max_length=255)
     def __str__(self):
@@ -51,7 +56,5 @@ class Score(models.Model):
     score = models.TextField()
     participant = models.ForeignKey(Participant, on_delete=models.CASCADE)
     competition = models.ForeignKey(Competition, on_delete=models.CASCADE)
-    
-    
 
 

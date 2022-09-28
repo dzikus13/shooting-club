@@ -11,3 +11,5 @@ admin.site.register(Competition)
 admin.site.register(Prize)
 admin.site.register(Schedule)
 admin.site.register(Score)
+
+
