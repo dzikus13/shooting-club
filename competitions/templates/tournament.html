@@ -1,0 +1,16 @@
+
+{% block content %}
+Tournament list
+<br/>
+{% for item in t %}
+    <br/>
+    {{ item.name }}
+    <br/>
+    {{ item.date }}
+    <br/>
+    {{ item.description }}
+
+{% endfor %}
+
+
+{% endblock %}
